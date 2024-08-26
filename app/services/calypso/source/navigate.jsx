@@ -25,22 +25,27 @@ export default function Navigate() {
     ];
 
     return (
-        <nav className="flex justify-between w-[300px] my-8">
-            {route?.map((item, index) => {
-                return (
-                    <Link
-                        key={index}
-                        href={item.href}
-                        className={
-                            pathname == item.href
-                                ? "text-[#0BA864] border-[#0BA864] border-b-2 pb-2"
-                                : ""
-                        }
-                    >
-                        {item.title}
-                    </Link>
-                );
-            })}
-        </nav>
+        <div>
+            <select className="block dark:bg-[#1A1A1A] dark:text-white dark:border-[#313131] w-full sm:hidden border border-[#E8E8E8] p-3 my-8 rounded-xl">
+                <option value="">Upload</option>
+            </select>
+            <nav className="sm:flex hidden justify-between w-[300px] my-8">
+                {route?.map((item, index) => {
+                    return (
+                        <Link
+                            key={index}
+                            href={item.href}
+                            className={
+                                pathname.startsWith(item.href)
+                                    ? "text-[#0BA864] border-[#0BA864] border-b-2 pb-2"
+                                    : "dark:text-[#E8E8E8]"
+                            }
+                        >
+                            {item.title}
+                        </Link>
+                    );
+                })}
+            </nav>
+        </div>
     );
 }

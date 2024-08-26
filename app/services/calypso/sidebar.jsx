@@ -75,23 +75,36 @@ export default function Sidebar() {
         },
     ];
     return (
-        <nav className="w-64 flex flex-col">
-            {route.map((item, index) => {
-                return (
-                    <Link
-                        className={
-                            pathname == item.href
-                                ? " flex items-center py-2 px-4 bg-[#F4FBF8] text-[#0BA864] rounded-lg"
-                                : "py-2 px-4 flex items-center"
-                        }
-                        href={item.href}
-                        key={index}
-                    >
-                        <Image src={item.logo} className="mr-2" width={20} height={20} alt={item.title} />
-                        {item.title}
-                    </Link>
-                );
-            })}
-        </nav>
+        <div className='border-b dark:border-[#313131] sm:border-none pb-8 mb-8 sm:pb-0 sm:mb-0'>
+            <div className="flex sm:hidden">
+                <select className="border dark:bg-[#1A1A1A] dark:text-white dark:border-[#313131] border-[#E8E8E8] p-3 rounded-xl grow">
+                    <option value="">Source</option>
+                </select>
+            </div>
+            <nav className="w-64 flex-col sm:flex hidden">
+                {route.map((item, index) => {
+                    return (
+                        <Link
+                            className={
+                                pathname.startsWith(item.href)
+                                    ? " flex items-center py-2 px-4 dark:bg-[#0BA8641A] dark:border-[#16D180] bg-[#F4FBF8] text-[#0BA864] rounded-lg"
+                                    : "py-2 px-4 dark:text-[#BABABA] flex items-center"
+                            }
+                            href={item.href}
+                            key={index}
+                        >
+                            <Image
+                                src={item.logo}
+                                className="mr-2"
+                                width={20}
+                                height={20}
+                                alt={item.title}
+                            />
+                            {item.title}
+                        </Link>
+                    );
+                })}
+            </nav>
+        </div>
     );
 }

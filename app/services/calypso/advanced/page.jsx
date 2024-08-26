@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function page() {
-  return (
-    <div>Advanced</div>
-  )
+    return (
+        <div>
+            <h1 className="dark:text-white">Advanced</h1>
+        </div>
+    );
 }

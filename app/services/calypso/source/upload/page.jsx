@@ -1,42 +1,50 @@
 export default function page() {
     return (
-        <form className="bg-[#F7F7F7] p-4 rounded-lg min-w-[782px]">
+        <form className="bg-[#F7F7F7] dark:bg-[#272727] p-4 rounded-lg">
             <div className="flex flex-col mb-4">
-                <label htmlFor="img">Image</label>
+                <label htmlFor="img" className="dark:text-[#BABABA]">
+                    Image
+                </label>
                 <input
-                    className="border py-2 px-3 rounded-lg my-2"
+                    className="border py-2 px-3 rounded-lg my-2 max-w-full dark:border-[#313131] dark:bg-[#1A1A1A]"
                     id="img"
                     type="text"
-                    name='img'
+                    name="img"
                 />
                 <span className="text-sm text-[#969696]">
                     Enter a public image name from any Docker registry
                 </span>
             </div>
-            <div className="flex justify-between items-center mb-6">
-                <div className="w-6/12 mr-4">
-                    <label className="block" htmlFor="username">
+            <div className="flex justify-between sm:flex-row flex-col items-center mb-6">
+                <div className="w-full md:w-6/12 sm:mr-4">
+                    <label
+                        className="block dark:text-[rgb(186,186,186)]"
+                        htmlFor="username"
+                    >
                         Username
                     </label>
                     <input
-                        className="border py-2 px-3 rounded-lg w-full my-2"
+                        className="flex  grow border py-2 px-3 w-full rounded-lg my-2 dark:border-[#313131]  dark:bg-[#1A1A1A]"
                         id="username"
                         type="text"
-                        name='username'
+                        name="username"
                     />
                     <span className="text-sm text-[#969696]">
                         Used for private registries
                     </span>
                 </div>
-                <div className="w-6/12">
-                    <label className="block" htmlFor="password">
+                <div className="w-full md:w-6/12 sm:mr-4">
+                    <label
+                        className="block dark:text-[#BABABA]"
+                        htmlFor="password"
+                    >
                         Username
                     </label>
                     <input
-                        className="border py-2 px-3 rounded-lg w-full my-2"
+                        className="flex grow border py-2 px-3 w-full rounded-lg my-2 dark:border-[#313131]  dark:bg-[#1A1A1A]"
                         id="password"
                         type="password"
-                        name='password'
+                        name="password"
                     />
                     <span className="text-sm text-[#969696]">
                         Used for private registries

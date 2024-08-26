@@ -19,3 +19,9 @@
     text-wrap: balance;
   }
 }
+
+.custom-gradient {
+  @apply bg-gray-900;
+  background-image: linear-gradient(0deg, rgba(11, 168, 100, 0.10) 0%, rgba(11, 168, 100, 0.10) 10%), #1A1A1A;
+
+}

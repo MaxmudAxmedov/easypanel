@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function page() {
-  return (
-    <div>Overview</div>
-  )
+    return (
+        <div>
+            <h1 className="dark:text-white">Overview</h1>
+        </div>
+    );
 }

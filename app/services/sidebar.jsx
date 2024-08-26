@@ -24,10 +24,10 @@ export default function Sidebar() {
         },
     ];
     return (
-        <div className="p-6 w-[300px] bg-[#F7F7F7] h-screen">
-            <div className="flex justify-between border-b pb-6">
+        <div className="hidden xs:block p-6 min-w-[300px] bg-[#F7F7F7] dark:bg-[#272727]">
+            <div className="flex justify-between border-b pb-6 dark:border-[#313131]">
                 <input
-                    className="py-2 px-4 rounded-lg border border-[#E8E8E8]"
+                    className="py-2 px-4 rounded-lg border border-[#E8E8E8] dark:border-[#313131] dark:bg-[#1A1A1A]"
                     placeholder="Jam's project"
                 />
                 <Image className="cursor-pointer" src={Config} alt='config icon'/>
@@ -42,7 +42,7 @@ export default function Sidebar() {
                         return (
                             <li
                                 key={index}
-                                className={pathname == item.href ? 'mb-2 cursor-pointer p-3 relative bg-white rounded-xl border border-[#E8E8E8]': 'mb-2 cursor-pointer p-3 relative rounded-xl'}
+                                className={pathname.startsWith(item.href) ? 'mb-2 cursor-pointer p-3 relative bg-white rounded-xl border border-[#E8E8E8] dark:border-[#313131] dark:bg-[#1A1A1A]  dark:text-[#E8E8E8]': 'mb-2 cursor-pointer p-3 relative rounded-xl dark:text-[#BABABA]'}
                             >
                                 <Link
                                     className={`before before:w-2 before:h-2 before:rounded-full before:left-4 pl-5 before:top-5  before:absolute before:bg-[#0BA864]

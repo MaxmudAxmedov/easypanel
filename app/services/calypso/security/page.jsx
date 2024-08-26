@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function page() {
-  return (
-    <div>Security</div>
-  )
+    return (
+        <div>
+            <h1 className="dark:text-white">Security</h1>
+        </div>
+    );
 }

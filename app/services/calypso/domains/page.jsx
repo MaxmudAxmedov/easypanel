@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function page() {
-  return (
-    <div>Domains</div>
-  )
+    return (
+        <div>
+            <h1 className="dark:text-white">Domains</h1>
+        </div>
+    );
 }
